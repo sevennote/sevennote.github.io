@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <title> Cheat-Sheet </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="cheat-sheet.css">
+</head>
+<body>
+  <h1>Cheat Sheet: JavaScript Prototypes</h1>
+  <p>
+    Every JavaScript object has a prototype. The prototype is also an object. All JavaScript objects inherit their properties and methods from their prototype.
+
+Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype. Objects created with new Date() inherit the Date.prototype. The Object.prototype is on the top of the prototype chain. All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+  </p>
+  <h3>Creating a Prototype</h3>
+  <p>
+    To create an object prototype is to use an object constructor function. For example:
+  </p>
+  <code>
+     function person(first, last, age, eyecolor) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eyecolor;
+      }
+
+  </code>
+  <h3> Adding a Property to an Object</h3>
+  <code>
+    person.nationality = "English";
+      return "My father is " + myFather.nationality + ".
+          // => My father is undefined
+
+  </code>
+  <h3> Adding a Method to an Object</h3>
+  <code>
+
+      myFather.name = function () {
+          return this.firstName + " " + this.lastName;
+      };
+  </code>
+  <h3> Adding Properties to a Prototype </h3>
+  <code>
+
+      person.nationality = "English";
+      return "My father is " + myFather.nationality + ".
+          // => My father is undefined
+
+  </code>
+  <h3> Using the prototype Property </h3>
+  <code>
+
+      function person(first, last, age, eyecolor) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eyecolor;
+      }
+      person.prototype.nationality = "English";
+  </code>
+  <h3> Using the prototype Method </h3>
+  <code>
+
+      function person(first, last, age, eyecolor) {
+          this.firstName = first;
+          this.lastName = last;
+          this.age = age;
+          this.eyeColor = eyecolor;
+      }
+      person.prototype.name = function() {
+          return this.firstName + " " + this.lastName;
+      };
+
+  </code>
+</body>
